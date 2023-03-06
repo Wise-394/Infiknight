@@ -21,13 +21,13 @@ public class groundscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0) & onGround)
+        if (Input.GetMouseButtonDown(1) & onGround)
         {
            myrigidbody.velocity = Vector2.up * jumpHeight;
             animator.SetBool("jumping", true);
             onGround = false;
         }
-        else if (Input.GetMouseButtonDown(0) && doublejump > 0)
+        else if (Input.GetMouseButtonDown(1) && doublejump > 0)
         {
             myrigidbody.velocity = Vector2.up * doubleJumpHeight;
             animator.SetBool("jumping", true);
@@ -42,6 +42,22 @@ public class groundscript : MonoBehaviour
             onGround = true;
             animator.SetBool("jumping", false);
             doublejump = 1;
+        }
+    }
+    public void onclick() 
+    {
+        if (onGround)
+        {
+            myrigidbody.velocity = Vector2.up * jumpHeight;
+            animator.SetBool("jumping", true);
+            onGround = false;
+        }
+        else if (doublejump > 0)
+        {
+            myrigidbody.velocity = Vector2.up * doubleJumpHeight;
+            animator.SetBool("jumping", true);
+            onGround = false;
+            doublejump--;
         }
     }
 }

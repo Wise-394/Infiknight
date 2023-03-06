@@ -6,6 +6,7 @@ TagManager:
   tags:
   - collider
   - knight
+  - Sword
   layers:
   - Default
   - TransparentFX

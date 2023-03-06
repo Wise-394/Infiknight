@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Sword
+  m_Name: birbanim
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,15 +20,9 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 21300000, guid: f31a219119d1f4940a460c7ac7e606cd, type: 3}
-    - time: 0.16666667
-      value: {fileID: 21300000, guid: b2e81acd78094e14cad7268c47eb461f, type: 3}
-    - time: 0.25
-      value: {fileID: 21300000, guid: 32013444e6be8d542997d9a3f385716d, type: 3}
-    - time: 0.33333334
-      value: {fileID: 21300000, guid: 17f65f0d7507348469ff11dc19888d80, type: 3}
-    - time: 0.41666666
-      value: {fileID: 21300000, guid: 31a2501fe4692ab44b4278f5f660c80e, type: 3}
+      value: {fileID: 21300000, guid: edf9cc9bc8a5ac844b23be87b96d5ac8, type: 3}
+    - time: 0.083333336
+      value: {fileID: 21300000, guid: 626255292cf304b499cf65cf33bc4cbf, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,17 +42,14 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 21300000, guid: f31a219119d1f4940a460c7ac7e606cd, type: 3}
-    - {fileID: 21300000, guid: b2e81acd78094e14cad7268c47eb461f, type: 3}
-    - {fileID: 21300000, guid: 32013444e6be8d542997d9a3f385716d, type: 3}
-    - {fileID: 21300000, guid: 17f65f0d7507348469ff11dc19888d80, type: 3}
-    - {fileID: 21300000, guid: 31a2501fe4692ab44b4278f5f660c80e, type: 3}
+    - {fileID: 21300000, guid: edf9cc9bc8a5ac844b23be87b96d5ac8, type: 3}
+    - {fileID: 21300000, guid: 626255292cf304b499cf65cf33bc4cbf, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.16666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0

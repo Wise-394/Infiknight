@@ -15,24 +15,5 @@ public class AttackScript : MonoBehaviour
     {
         
     }
-    public void OnClick()
-    {
-        // Find the object with the Animator component
-        GameObject sword = GameObject.Find("Sword");
-        if (sword == null)
-        {
-            Debug.LogError("Cannot find object with Animator component");
-            return;
-        }
-
-        // Get the Animator component and set the trigger
-        Animator animator = sword.GetComponent<Animator>();
-        if (animator == null)
-        {
-            Debug.LogError("Cannot find Animator component on object");
-            return;
-        }
-
-        animator.SetBool("attacking", true);
-    }
+    
 }
