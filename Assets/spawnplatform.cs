@@ -45,7 +45,7 @@ public class spawnplatform : MonoBehaviour
             else if (birbspawner == birbspawnrate)
             {
                 spawnBirb();
-                birbspawner = Random.Range(0, 2);
+                birbspawner = Random.Range(0, 1);
             }
         }
     }

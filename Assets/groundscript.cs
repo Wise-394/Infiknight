@@ -29,6 +29,7 @@ public class groundscript : MonoBehaviour
         }
         else if (Input.GetMouseButtonDown(1) && doublejump > 0)
         {
+            animator.SetTrigger("djump");
             myrigidbody.velocity = Vector2.up * doubleJumpHeight;
             animator.SetBool("jumping", true);
             onGround = false;
@@ -54,6 +55,7 @@ public class groundscript : MonoBehaviour
         }
         else if (doublejump > 0)
         {
+            animator.SetTrigger("djump");
             myrigidbody.velocity = Vector2.up * doubleJumpHeight;
             animator.SetBool("jumping", true);
             onGround = false;
