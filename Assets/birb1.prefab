@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48db49fe2562c95448eb3548bbca8d2b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  birb: {fileID: 8057925637357082374}
   logic: {fileID: 0}
   birbMoveSpeed: 12
   gone: -11

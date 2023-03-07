@@ -11,15 +11,19 @@ public class spawnplatform : MonoBehaviour
     public float offsetY;
     public float birbspawnrate = 1;
     public float birbspawner = 0;
+    public float randomizer;
     // Start is called before the first frame update
     void Start()
     {
-        if(timer < spawnrate)
+        float lowestvalue = transform.position.y - offsetY;
+        float hihestvalue = transform.position.y + offsetY;
+        if (timer < spawnrate)
         {
             timer += Time.deltaTime;
         }
         else
         {
+            randomizer = Random.Range(lowestvalue, hihestvalue);
             spawnPlatform();
             timer = 0;
         }
@@ -36,6 +40,9 @@ public class spawnplatform : MonoBehaviour
         }
         else
         {
+            float lowestvalue = transform.position.y - offsetY;
+            float hihestvalue = transform.position.y + offsetY;
+            randomizer = Random.Range(lowestvalue, hihestvalue);
             spawnPlatform();
             timer = 0;
             if (birbspawner != birbspawnrate)
@@ -51,14 +58,10 @@ public class spawnplatform : MonoBehaviour
     }
     void spawnPlatform() 
     {
-        float lowestvalue = transform.position.y - offsetY;
-        float hihestvalue = transform.position.y + offsetY;
-        Instantiate(platform, new Vector3(transform.position.x,Random.Range(lowestvalue,hihestvalue), transform.position.z), transform.rotation);
+        Instantiate(platform, new Vector3(transform.position.x,randomizer, transform.position.z), transform.rotation);
     }
     void spawnBirb() 
     {
-        float lowestvalue = transform.position.y - offsetY;
-        float hihestvalue = transform.position.y + offsetY;
-        Instantiate(birb, new Vector3(transform.position.x, Random.Range(lowestvalue, hihestvalue), transform.position.z), transform.rotation);
+        Instantiate(birb, new Vector3(transform.position.x,randomizer + Random.Range(1,2), transform.position.z), transform.rotation);
     }
 }
