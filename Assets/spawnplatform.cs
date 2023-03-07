@@ -12,6 +12,9 @@ public class spawnplatform : MonoBehaviour
     public float birbspawnrate = 1;
     public float birbspawner = 0;
     public float randomizer;
+    public float slimespawner = 10;
+    public float slimetimer;
+    public GameObject slime;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +23,8 @@ public class spawnplatform : MonoBehaviour
         if (timer < spawnrate)
         {
             timer += Time.deltaTime;
+            
+
         }
         else
         {
@@ -27,16 +32,17 @@ public class spawnplatform : MonoBehaviour
             spawnPlatform();
             timer = 0;
         }
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-      
+
         if (timer < spawnrate)
         {
             timer += Time.deltaTime;
-           
+
         }
         else
         {
@@ -47,21 +53,37 @@ public class spawnplatform : MonoBehaviour
             timer = 0;
             if (birbspawner != birbspawnrate)
             {
-                birbspawner = Random.Range(0,2);
+
+                birbspawner = Random.Range(0, 2);
             }
             else if (birbspawner == birbspawnrate)
             {
+            
                 spawnBirb();
                 birbspawner = Random.Range(0, 1);
             }
         }
+        if (slimetimer < slimespawner)
+        {
+            slimetimer += Time.deltaTime;
+        }
+        else
+        {
+            spawnslime();
+            slimetimer = 0;
+        }
     }
-    void spawnPlatform() 
+    void spawnPlatform()
     {
-        Instantiate(platform, new Vector3(transform.position.x,randomizer, transform.position.z), transform.rotation);
+        Instantiate(platform, new Vector3(transform.position.x, randomizer, transform.position.z), transform.rotation);
     }
-    void spawnBirb() 
+    void spawnBirb()
     {
-        Instantiate(birb, new Vector3(transform.position.x,randomizer + Random.Range(1,2), transform.position.z), transform.rotation);
+        Instantiate(birb, new Vector3(transform.position.x, randomizer + Random.Range(1,2), transform.position.z), transform.rotation);
+    }
+    void spawnslime()
+    {
+        Instantiate(slime, new Vector3(transform.position.x,randomizer + Random.Range(1, 5), transform.position.z), transform.rotation);
+        Debug.Log("slime spawned");
     }
 }

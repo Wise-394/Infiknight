@@ -25,7 +25,7 @@ public class cloud : MonoBehaviour
     public void TeleportObject()
     {
         Vector2 currentPosition = transform.position; 
-        Vector2 teleportPosition = new Vector2(teleportposition, currentPosition.y); 
+        Vector3 teleportPosition = new Vector3(teleportposition, currentPosition.y,2); 
         transform.position = teleportPosition; 
     }
 }
