@@ -9,6 +9,7 @@ TagManager:
   - Sword
   - logic
   - sound1
+  - sound2
   layers:
   - Default
   - TransparentFX
