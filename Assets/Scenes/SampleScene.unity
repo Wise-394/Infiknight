@@ -1372,6 +1372,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Greenbg (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1289768591478466469, guid: c6d9407d97583b4448c0156e8dd6f830, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289768591478466469, guid: c6d9407d97583b4448c0156e8dd6f830, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1289768591478466469, guid: c6d9407d97583b4448c0156e8dd6f830, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1289768591478466470, guid: c6d9407d97583b4448c0156e8dd6f830, type: 3}
       propertyPath: m_RootOrder
       value: 1

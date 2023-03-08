@@ -83,7 +83,10 @@ public class spawnplatform : MonoBehaviour
     }
     void spawnslime()
     {
-        Instantiate(slime, new Vector3(transform.position.x,randomizer + Random.Range(1, 5), transform.position.z), transform.rotation);
-        Debug.Log("slime spawned");
+        if (Random.value > 0.5f)
+        {
+            Instantiate(slime, new Vector3(transform.position.x, randomizer + Random.Range(1, 5), transform.position.z), transform.rotation);
+            Debug.Log("slime spawned");
+        }
     }
 }
