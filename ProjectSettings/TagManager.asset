@@ -8,6 +8,7 @@ TagManager:
   - knight
   - Sword
   - logic
+  - sound1
   layers:
   - Default
   - TransparentFX
