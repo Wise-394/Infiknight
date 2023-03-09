@@ -14,6 +14,7 @@ public class groundscript : MonoBehaviour
     public LogicScript logic;
     public bool isalive = true;
     public AudioSource jumpsound;
+    public ParticleSystem dust;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,13 +29,15 @@ public class groundscript : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(1) & onGround && isalive)
         {
-           myrigidbody.velocity = Vector2.up * jumpHeight;
-            animator.SetBool("jumping", true);
+            dust.Play();
             jumpsound.Play();
+            myrigidbody.velocity = Vector2.up * jumpHeight;
+            animator.SetBool("jumping", true);
             onGround = false;
         }
         else if (Input.GetMouseButtonDown(1) && doublejump > 0 && isalive)
         {
+            dust.Play();
             jumpsound.Play();
             animator.SetTrigger("djump");
             myrigidbody.velocity = Vector2.up * doubleJumpHeight;
@@ -44,6 +47,7 @@ public class groundscript : MonoBehaviour
         }
         if (gameObject.transform.position.y < -6) 
         {
+
             isalive = false;
             logic.gameOVer();
         }
@@ -61,6 +65,7 @@ public class groundscript : MonoBehaviour
     {
         if (onGround && isalive)
         {
+            dust.Play();
             jumpsound.Play();
             myrigidbody.velocity = Vector2.up * jumpHeight;
             animator.SetBool("jumping", true);
@@ -68,6 +73,7 @@ public class groundscript : MonoBehaviour
         }
         else if (doublejump > 0 && isalive)
         {
+            dust.Play();
             jumpsound.Play();
             animator.SetTrigger("djump");
             myrigidbody.velocity = Vector2.up * doubleJumpHeight;
@@ -75,6 +81,10 @@ public class groundscript : MonoBehaviour
             onGround = false;
             doublejump--;
         }
+    }
+    public void playDust() 
+    {
+        dust.Play();
     }
 
 }
