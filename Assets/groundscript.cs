@@ -27,7 +27,7 @@ public class groundscript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1) & onGround && isalive)
+        if (Input.GetKeyDown(KeyCode.Space) & onGround && isalive)
         {
             dust.Play();
             jumpsound.Play();
@@ -35,7 +35,7 @@ public class groundscript : MonoBehaviour
             animator.SetBool("jumping", true);
             onGround = false;
         }
-        else if (Input.GetMouseButtonDown(1) && doublejump > 0 && isalive)
+        else if (Input.GetKeyDown(KeyCode.Space) && doublejump > 0 && isalive)
         {
             dust.Play();
             jumpsound.Play();

@@ -29,4 +29,5 @@ public class logicscreeeeeeeept : MonoBehaviour
         text.SetActive(false);
         switcher = false;
     }
+   
 }
