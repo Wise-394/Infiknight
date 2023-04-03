@@ -3,10 +3,12 @@
 
 
 
-<h1>Infiknight a 2D infinite side scroller where you play as a brave knight on a never-ending journey. 
-Your mission is to attack enemies, jump through platforms and survive as long as you can </h1>
+<h3>Infiknight a 2D infinite side scroller where you play as a brave knight on a never-ending journey. 
+Your mission is to attack enemies, jump through platforms and survive as long as you can </h3>
 
-<b><h2Controls</b></2>
+<h3>download at:<b>https://wise-394.itch.io/infiknight</b></h3>
+
+<b><h2>Controls</b></h2>
 
 Spacebar - jump (for windows)
 
