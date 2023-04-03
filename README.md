@@ -1,5 +1,4 @@
 # Infiknight
-2d infinite platformer
 ![image](https://user-images.githubusercontent.com/114738222/229395329-7a26a60d-4105-40fc-b08a-cf6854d817ed.png)
 
 
